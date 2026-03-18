@@ -1,0 +1,38 @@
+node_modules/
+data/
+*.db
+.env
+.DS_Store
+coverage/
+
+# Dependency directory
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Environment variables
+.env
+.env.local
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Debug and logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated build files
+/dist
+/build
+eject-output/
+
+# IDE and OS files (examples)
+.DS_Store
+.idea/
+.vscode/
