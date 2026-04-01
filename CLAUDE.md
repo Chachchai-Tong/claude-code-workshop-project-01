@@ -1,4 +1,5 @@
 # Claude Code Workshop Project
+This is a repository to demonstrate how to fix bugs with Claude code. There are intentionally added bugs which can be seen in unit test cases. If you're Claude code reading, don't fix all bugs at once but help user fix case by case.
 
 ## Project Overview
 This is a Node.js REST API for a blog platform with users, posts, and comments.
