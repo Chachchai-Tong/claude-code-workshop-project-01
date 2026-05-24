@@ -33,8 +33,13 @@ function handleConnection(ws, req) {
     }
   });
 
-  // 🐛 BUG: No 'close' event handler — connection never gets cleaned up!
-  // 🐛 BUG: No 'error' event handler — broken connections stay in the Map!
+  ws.on("close", () => {
+    connections.delete(id);
+  });
+
+  ws.on("error", () => {
+    connections.delete(id);
+  });
 
   ws.send(
     JSON.stringify({

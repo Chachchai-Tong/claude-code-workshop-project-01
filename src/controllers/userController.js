@@ -13,9 +13,10 @@ function getUsers(req, res) {
     const perPage = parseInt(req.query.perPage) || 10;
 
     const users = userService.getUsers({ page, perPage });
+    const total = userService.getUserCount();
+    const totalPages = Math.ceil(total / perPage);
 
-    // BUG: Returns raw array without pagination metadata
-    res.json(users);
+    res.json({ data: users, meta: { total, page, perPage, totalPages } });
   } catch (err) {
     res.status(500).json({ error: "Internal server error" });
   }
